@@ -39,7 +39,7 @@ export async function POST(req) {
       'svix-timestamp': svix_timestamp,
       'svix-signature': svix_signature,
     }) 
-  } catch (err) {
+  } catch (error) {
     console.error('Error: Could not verify webhook:', err)
     return new Response('Error: Verification error', {
       status: 400,
