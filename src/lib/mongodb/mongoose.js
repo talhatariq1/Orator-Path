@@ -20,5 +20,7 @@ export const connect = async () => {
   }
 };
 
-//hola
+
+console.log('TESTING MONGODB_URI:', process.env.MONGODB_URI);
+
 
