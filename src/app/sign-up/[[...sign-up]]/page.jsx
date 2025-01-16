@@ -5,10 +5,3 @@ export default function Page() {
   <SignUp/>
 </div>
 }
-<ClerkProvider
-  appearance={{
-    layout: {
-      unsafe_disableDevelopmentModeWarnings: true,
-    },
-  }}
-/>
