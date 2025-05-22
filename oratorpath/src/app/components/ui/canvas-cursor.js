@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import useCanvasCursor from '../../../hooks/useCanvasCursor/index';
+import useCanvasCursor from '../../../hooks/use-canvasCursor/index';
 
 const CanvasCursor = () => {
   const [isDashboard, setIsDashboard] = useState(false);
