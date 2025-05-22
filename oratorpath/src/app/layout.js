@@ -20,7 +20,6 @@ const SVDAttributeRemover = dynamic(() => import('./components/client/SVDAttribu
 const AttributeDebugger = dynamic(() => import('./components/client/AttributeDebugger'));
 const HydrationErrorFix = dynamic(() => import('./components/client/HydrationErrorFix'));
 const ScriptMonitor = dynamic(() => import('./components/client/ScriptMonitor'));
-const DirectHydrationFix = dynamic(() => import('./components/client/DirectHydrationFix.js'));
 
 // Fonts are now imported from lib/fonts.js
 
