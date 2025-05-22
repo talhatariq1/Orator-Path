@@ -1,0 +1,68 @@
+/* Speech Practice Playground Styles */
+
+.speech-meter {
+  position: relative;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.speech-meter-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4C6DFF, #8A3AEA);
+  border-radius: 3px;
+  transition: width 0.5s ease-out;
+}
+
+/* Animated wave effect for recording */
+.recording-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0) 70%);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.8;
+  }
+}
+
+/* Feedback card hover effect */
+.feedback-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(138, 58, 234, 0.2);
+}
+
+/* Animated background for the section */
+.practice-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(76, 109, 255, 0.15), transparent 20%),
+    radial-gradient(circle at 80% 70%, rgba(138, 58, 234, 0.15), transparent 20%);
+  opacity: 0.5;
+  z-index: -1;
+}
