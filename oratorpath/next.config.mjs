@@ -15,21 +15,13 @@ const nextConfig = {
           filename: 'static/fonts/[name][ext]',
         },
       });
-      return config;
-    },
-    // Disable experimental features that might be causing font issues
-    experimental: {
-      turbo: false, // Disable Turbopack
-      optimizeFonts: true,
-    },
-    // Add path aliases
-    webpack: (config) => {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': '.',
       };
       return config;
     },
+    experimental: {},
   };
 
 export default nextConfig;
