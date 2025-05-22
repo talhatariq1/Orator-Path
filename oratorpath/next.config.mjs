@@ -18,6 +18,9 @@ const nextConfig = {
       config.resolve.alias = {
         ...config.resolve.alias,
         '@': '.',
+        '@app': './src/app',
+        '@components': './src/app/components',
+        '@hooks': './src/app/hooks',
       };
       return config;
     },
