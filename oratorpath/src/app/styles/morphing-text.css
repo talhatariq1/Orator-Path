@@ -1,0 +1,52 @@
+/* Custom styles for the morphing text animation */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+}
+
+/* Add a subtle glow effect on hover */
+.morphing-text-container:hover .morphing-text-glow {
+  opacity: 0.8;
+  filter: blur(15px);
+}
+
+.morphing-text-container {
+  position: relative;
+  min-height: 2em; /* Ensures consistent height during animation */
+  min-width: 8em; /* Ensures some minimum width */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.morphing-text-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure consistent letter spacing */
+.morphing-text-container motion\:span {
+  letter-spacing: 0.01em;
+  margin-right: 0.01em;
+}
+
+/* Ensure better rendering on different browsers */
+@supports (-moz-appearance:none) {
+  .perspective-1000 {
+    transform: perspective(1000px);
+  }
+}
