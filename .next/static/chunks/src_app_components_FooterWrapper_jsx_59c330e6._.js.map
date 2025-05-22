@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://E%3A/University/FYP/OP/FYP-Design/Orator-Path/oratorpath/src/app/components/FooterWrapper.jsx"],"sourcesContent":["\"use client\";\n\nimport React from \"react\";\nimport { usePathname } from \"next/navigation\";\nimport dynamic from \"next/dynamic\";\n\nconst Footer = dynamic(() => import('./Footer'));\nconst SimpleFooter = dynamic(() => import('./SimpleFooter'));\n\nexport default function FooterWrapper() {\n  const pathname = usePathname();\n  const isRootPage = pathname === \"/\";\n  \n  return (\n    <>\n      {isRootPage ? <Footer /> : <SimpleFooter />}\n    </>\n  );\n}\n"],"names":[],"mappings":";;;;AAEA;AACA;AACA;;;;;AAJA;;;;AAMA,MAAM,SAAS,CAAA,GAAA,kKAAA,CAAA,UAAO,AAAD,EAAE;;;;;;;KAAjB;AACN,MAAM,eAAe,CAAA,GAAA,kKAAA,CAAA,UAAO,AAAD,EAAE;;;;;;;MAAvB;AAES,SAAS;;IACtB,MAAM,WAAW,CAAA,GAAA,qIAAA,CAAA,cAAW,AAAD;IAC3B,MAAM,aAAa,aAAa;IAEhC,qBACE;kBACG,2BAAa,6LAAC;;;;iCAAY,6LAAC;;;;;;AAGlC;GATwB;;QACL,qIAAA,CAAA,cAAW;;;MADN","debugId":null}}]
+}

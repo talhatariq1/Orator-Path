@@ -1,0 +1,158 @@
+/* [project]/src/app/styles/dashboard-background.css [app-client] (css) */
+.dashboard-bg {
+  z-index: -1;
+  background: linear-gradient(to bottom right, #0f0f14, #141419);
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.dashboard-bg:after {
+  content: "";
+  opacity: .4;
+  background: linear-gradient(110deg, #4c6dff05, #0000 40%), linear-gradient(230deg, #8a3aea05, #0000 40%);
+  position: absolute;
+  inset: 0;
+}
+
+.dashboard-active .dashboard-card, .dashboard-active .stat-card {
+  background-color: rgb(var(--color-card));
+  border-color: rgb(var(--color-border));
+}
+
+.dashboard-active h1, .dashboard-active h2, .dashboard-active h3, .dashboard-active h4, .dashboard-active h5, .dashboard-active h6 {
+  color: rgb(var(--color-text-primary));
+}
+
+.dashboard-active p, .dashboard-active span, .dashboard-active div {
+  color: rgb(var(--color-text-secondary));
+}
+
+.dashboard-active .sidebar-link-text {
+  color: inherit;
+}
+
+.cl-userPreviewTextContainer .cl-userPreviewMainIdentifier .cl-internal-3gh7hq, .cl-userPreviewTextContainer .cl-userPreviewSecondaryIdentifier {
+  color: #000;
+}
+
+.dashboard-active .dashboard-card:hover, .dashboard-active .stat-card:hover {
+  border-color: rgba(var(--color-primary), .5);
+  box-shadow: 0 4px 20px #0003, 0 0 10px rgba(var(--color-primary), .1);
+}
+
+.dashboard-active .practice-item:hover {
+  background-color: rgba(var(--color-surface), .8);
+}
+
+
+/* [project]/src/app/styles/dashboard/dashboard-typography.css [app-client] (css) */
+.dashboard-active h1, .dashboard-active h2, .dashboard-active h3, .dashboard-active h4, .dashboard-active h5, .dashboard-active h6, .dashboard-active .section-title, .dashboard-active .stat-value, .dashboard-active .widget-title, .dashboard-active .card-title {
+  letter-spacing: -.01em;
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+.dashboard-active .sidebar-link-text, .dashboard-active .stat-label, .dashboard-active .dashboard-card-title, .dashboard-active .dashboard-heading, .dashboard-active .widget-header {
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+.dashboard-active .dashboard-welcome-title, .dashboard-active .dashboard-main-title {
+  font-weight: 600;
+  font-family: var(--font-space-grotesk, "Space Grotesk", sans-serif) !important;
+}
+
+.dashboard-active .logo-text {
+  font-family: var(--font-cinzel-decorative, "Cinzel Decorative", serif);
+}
+
+.dashboard-active h1 {
+  font-weight: 700;
+}
+
+.dashboard-active h2, .dashboard-active h3 {
+  font-weight: 600;
+}
+
+.dashboard-active h4, .dashboard-active h5, .dashboard-active h6 {
+  font-weight: 500;
+}
+
+.dashboard-active button, .dashboard-active .btn, .dashboard-active .nav-item {
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+
+/* [project]/src/app/styles/layout-transitions.css [app-client] (css) */
+.dashboard-root {
+  background-color: #111217;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.layout-transition {
+  transition: opacity .3s ease-in-out;
+}
+
+.layout-transition-enter {
+  opacity: 0;
+}
+
+.layout-transition-enter-active, .layout-transition-exit {
+  opacity: 1;
+}
+
+.layout-transition-exit-active {
+  opacity: 0;
+}
+
+body.dashboard-active .pattern-bg, body.dashboard-active .main-header, body.dashboard-active footer {
+  display: none !important;
+}
+
+.page-transition {
+  transition: opacity .2s ease-in-out;
+}
+
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active, .page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+}
+
+.content-wrapper {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+.dashboard-content-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.dashboard-content-enter-active {
+  opacity: 1;
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  transform: translateY(0);
+}
+
+.dashboard-content-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dashboard-content-exit-active {
+  opacity: 0;
+  transition: opacity .3s ease-in, transform .3s ease-in;
+  transform: translateY(10px);
+}
+
+
+/*# sourceMappingURL=src_app_styles_c15ccf18._.css.map*/

@@ -1,0 +1,151 @@
+/* [project]/src/app/styles/dashboard-background.css [app-client] (css) */
+.dashboard-bg {
+  z-index: -1;
+  background: linear-gradient(to bottom right, #0f0f14, #141419);
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.dashboard-bg:after {
+  content: "";
+  opacity: .4;
+  background: linear-gradient(110deg, #4c6dff05, #0000 40%), linear-gradient(230deg, #8a3aea05, #0000 40%);
+  position: absolute;
+  inset: 0;
+}
+
+.dashboard-active .dashboard-card, .dashboard-active .stat-card {
+  background-color: rgb(var(--color-card));
+  border-color: rgb(var(--color-border));
+}
+
+.dashboard-active h1, .dashboard-active h2, .dashboard-active h3, .dashboard-active h4, .dashboard-active h5, .dashboard-active h6 {
+  color: rgb(var(--color-text-primary));
+}
+
+.dashboard-active p, .dashboard-active span, .dashboard-active div {
+  color: rgb(var(--color-text-secondary));
+}
+
+.dashboard-active .sidebar-link-text {
+  color: inherit;
+}
+
+.cl-userPreviewTextContainer .cl-userPreviewMainIdentifier .cl-internal-3gh7hq, .cl-userPreviewTextContainer .cl-userPreviewSecondaryIdentifier {
+  color: #000;
+}
+
+.dashboard-active .dashboard-card:hover, .dashboard-active .stat-card:hover {
+  border-color: rgba(var(--color-primary), .5);
+  box-shadow: 0 4px 20px #0003, 0 0 10px rgba(var(--color-primary), .1);
+}
+
+.dashboard-active .practice-item:hover {
+  background-color: rgba(var(--color-surface), .8);
+}
+
+
+/* [project]/src/app/styles/dashboard/dashboard-typography.css [app-client] (css) */
+.dashboard-active h1, .dashboard-active h2, .dashboard-active h3, .dashboard-active h4, .dashboard-active h5, .dashboard-active h6, .dashboard-active .section-title, .dashboard-active .stat-value, .dashboard-active .widget-title, .dashboard-active .card-title {
+  letter-spacing: -.01em;
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+.dashboard-active .sidebar-link-text, .dashboard-active .stat-label, .dashboard-active .dashboard-card-title, .dashboard-active .dashboard-heading, .dashboard-active .widget-header {
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+.dashboard-active .dashboard-welcome-title, .dashboard-active .dashboard-main-title {
+  font-weight: 600;
+  font-family: var(--font-space-grotesk, "Space Grotesk", sans-serif) !important;
+}
+
+.dashboard-active .logo-text {
+  font-family: var(--font-cinzel-decorative, "Cinzel Decorative", serif);
+}
+
+.dashboard-active h1 {
+  font-weight: 700;
+}
+
+.dashboard-active h2, .dashboard-active h3 {
+  font-weight: 600;
+}
+
+.dashboard-active h4, .dashboard-active h5, .dashboard-active h6 {
+  font-weight: 500;
+}
+
+.dashboard-active button, .dashboard-active .btn, .dashboard-active .nav-item {
+  font-family: var(--font-inter, "Inter", sans-serif) !important;
+}
+
+
+/* [project]/src/app/styles/dashboard-preload.css [app-client] (css) */
+html.dashboard-page, html[data-dashboard="true"] {
+  background-color: #111217;
+}
+
+html.dashboard-page .pattern-bg, html.dashboard-page header, html.dashboard-page header.main-header, html.dashboard-page nav, html.dashboard-page footer, html.dashboard-page .canvas-cursor-wrapper, html[data-dashboard="true"] .pattern-bg, html[data-dashboard="true"] header, html[data-dashboard="true"] header.main-header, html[data-dashboard="true"] nav, html[data-dashboard="true"] footer, html[data-dashboard="true"] .canvas-cursor-wrapper, [data-layout="root"] .pattern-bg, [data-layout="root"] header, [data-layout="root"] header.main-header, [data-layout="root"] nav, [data-layout="root"] footer, [data-layout="root"] .canvas-cursor-wrapper, body > div > .pattern-bg, body > div > header, body > div > nav, body > div > footer, body > div > .canvas-cursor-wrapper, .pattern-bg, header.main-header, nav.main-nav, footer {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  display: none !important;
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
+html.dashboard-page body, html[data-dashboard="true"] body {
+  background-color: #111217 !important;
+  background-image: linear-gradient(to bottom right, #0f0f14, #141419) !important;
+}
+
+html.dashboard-page.loading, html[data-dashboard="true"][data-loading="true"], [data-dashboard-preload="true"] {
+  overflow: hidden;
+}
+
+.dashboard-preload-spinner, [data-dashboard-spinner="true"] {
+  z-index: 9999;
+  border: 4px solid #ffffff1a;
+  border-color: #8a3aea #ffffff1a #ffffff1a #4c6dff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: 1s linear infinite dashboard-preload-spin;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes dashboard-preload-spin {
+  to {
+    transform: translate(-50%, -50%)rotate(360deg);
+  }
+}
+
+.dashboard-preload-text, [data-dashboard-text="true"] {
+  color: #ffffffb3;
+  z-index: 9999;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  position: fixed;
+  top: calc(50% + 30px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dashboard-loaded .dashboard-preload-spinner, .dashboard-loaded .dashboard-preload-text, .dashboard-loaded [data-dashboard-spinner="true"], .dashboard-loaded [data-dashboard-text="true"], [data-dashboard-loaded="true"] .dashboard-preload-spinner, [data-dashboard-loaded="true"] .dashboard-preload-text, [data-dashboard-loaded="true"] [data-dashboard-spinner="true"], [data-dashboard-loaded="true"] [data-dashboard-text="true"] {
+  display: none;
+}
+
+
+/*# sourceMappingURL=src_app_styles_1c7d0a97._.css.map*/

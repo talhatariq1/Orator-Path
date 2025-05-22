@@ -1,0 +1,25 @@
+{
+  "[project]/src/app/components/SimpleFooter.jsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/components/SimpleFooter.jsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_b0f4acb5._.js",
+      "static/chunks/src_app_components_SimpleFooter_jsx_677c24ab._.js",
+      "static/chunks/src_app_components_SimpleFooter_jsx_9af93eb2._.js"
+    ]
+  },
+  "[project]/src/app/components/Footer.jsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/components/Footer.jsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/node_modules_b0f4acb5._.js",
+      "static/chunks/src_app_components_Footer_jsx_5cb37c5a._.js",
+      "static/chunks/src_app_components_Footer_jsx_9af93eb2._.js"
+    ]
+  },
+  "[project]/src/app/components/ui/canvas-cursor.js [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/src/app/components/ui/canvas-cursor.js [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/src_app_ae188ab0._.js",
+      "static/chunks/src_app_components_ui_canvas-cursor_9af93eb2.js"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/focus-areas/route": "app/api/focus-areas/route.js",
+  "/api/personalized-recommendations/route": "app/api/personalized-recommendations/route.js",
+  "/api/practice-consistency/route": "app/api/practice-consistency/route.js",
+  "/api/speech-metrics/route": "app/api/speech-metrics/route.js",
+  "/api/user-stats/route": "app/api/user-stats/route.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

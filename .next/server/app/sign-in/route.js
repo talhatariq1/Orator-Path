@@ -1,0 +1,12 @@
+const CHUNK_PUBLIC_PATH = "server/app/sign-in/route.js";
+const runtime = require("../../chunks/[turbopack]_runtime.js");
+runtime.loadChunk("server/chunks/node_modules_76460571._.js");
+runtime.loadChunk("server/chunks/node_modules_next_a1a45293._.js");
+runtime.loadChunk("server/chunks/_1b3e9b5f._.js");
+runtime.loadChunk("server/chunks/node_modules_@clerk_shared_dist_27c5bfbc._.js");
+runtime.loadChunk("server/chunks/node_modules_@clerk_backend_dist_41fbb845._.js");
+runtime.loadChunk("server/chunks/node_modules_32768d87._.js");
+runtime.loadChunk("server/chunks/[root-of-the-server]__877331b5._.js");
+runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/sign-in/route/actions.js { ACTIONS_MODULE0 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/server-actions.js [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/node_modules/@clerk/nextjs/dist/esm/app-router/keyless-actions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)", CHUNK_PUBLIC_PATH);
+runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/sign-in/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)", CHUNK_PUBLIC_PATH);
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/src/app/sign-in/route.js [app-route] (ecmascript)\" } [app-route] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

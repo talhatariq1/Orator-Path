@@ -1,0 +1,3 @@
+{
+  "/api/server-time/route": "app/api/server-time/route.js"
+}

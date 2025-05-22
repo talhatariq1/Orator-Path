@@ -1,0 +1,48 @@
+/* [project]/src/app/styles/morphing-text.css [app-client] (css) */
+.perspective-1000 {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.transform-gpu {
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.morphing-text-container:hover .morphing-text-glow {
+  opacity: .8;
+  filter: blur(15px);
+}
+
+.morphing-text-container {
+  justify-content: center;
+  align-items: center;
+  min-width: 8em;
+  min-height: 2em;
+  display: inline-flex;
+  position: relative;
+}
+
+.morphing-text-glow {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle, #ffffff4d 0%, #fff0 70%);
+  transition: opacity .5s, filter .5s;
+  position: absolute;
+  inset: 0;
+}
+
+.morphing-text-container motion\:span {
+  letter-spacing: .01em;
+  margin-right: .01em;
+}
+
+@supports ((-moz-appearance: none)) {
+  .perspective-1000 {
+    transform: perspective(1000px);
+  }
+}
+
+/*# sourceMappingURL=src_app_styles_morphing-text_css_f9ee138c._.single.css.map*/

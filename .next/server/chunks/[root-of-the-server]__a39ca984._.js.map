@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 60, "column": 0}, "map": {"version":3,"sources":["file://E%3A/University/FYP/OP/FYP-Design/Orator-Path/oratorpath/src/app/api/server-time/route.js"],"sourcesContent":["import { NextResponse } from 'next/server';\n\nexport const dynamic = 'force-dynamic'; // Ensure this is not cached\n\nexport async function GET() {\n  // Set appropriate headers\n  const headers = {\n    'Content-Type': 'application/json',\n    'Cache-Control': 'no-store, max-age=0'\n  };\n\n  // Create a simple response with the current time\n  const data = {\n    serverTime: new Date().toISOString(),\n    timestamp: Date.now(),\n    message: 'Server time for clock skew detection'\n  };\n\n  // Return JSON response with headers\n  return new NextResponse(JSON.stringify(data), {\n    status: 200,\n    headers\n  });\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEO,MAAM,UAAU,iBAAiB,4BAA4B;AAE7D,eAAe;IACpB,0BAA0B;IAC1B,MAAM,UAAU;QACd,gBAAgB;QAChB,iBAAiB;IACnB;IAEA,iDAAiD;IACjD,MAAM,OAAO;QACX,YAAY,IAAI,OAAO,WAAW;QAClC,WAAW,KAAK,GAAG;QACnB,SAAS;IACX;IAEA,oCAAoC;IACpC,OAAO,IAAI,gIAAA,CAAA,eAAY,CAAC,KAAK,SAAS,CAAC,OAAO;QAC5C,QAAQ;QACR;IACF;AACF","debugId":null}}]
+}
