@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://E%3A/University/FYP/OP/FYP-Design/Orator-Path/oratorpath/src/app/dashboard/loading.jsx"],"sourcesContent":["\"use client\";\n\nimport { motion } from \"framer-motion\";\n\nexport default function DashboardLoading() {\n  return (\n    <div className=\"flex h-screen w-full items-center justify-center\">\n      <div className=\"flex flex-col items-center\">\n        <motion.div\n          className=\"w-16 h-16 rounded-full border-4 border-t-purple-500 border-r-purple-500 border-b-transparent border-l-transparent\"\n          animate={{ rotate: 360 }}\n          transition={{ duration: 1, repeat: Infinity, ease: \"linear\" }}\n        />\n        <p className=\"mt-4 text-gray-400\">Loading dashboard...</p>\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC,0LAAA,CAAA,SAAM,CAAC,GAAG;oBACT,WAAU;oBACV,SAAS;wBAAE,QAAQ;oBAAI;oBACvB,YAAY;wBAAE,UAAU;wBAAG,QAAQ;wBAAU,MAAM;oBAAS;;;;;;8BAE9D,8OAAC;oBAAE,WAAU;8BAAqB;;;;;;;;;;;;;;;;;AAI1C","debugId":null}}]
-}

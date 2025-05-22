@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/app/styles/navigation-responsive.css"],"sourcesContent":["/* Responsive styles for navigation bar */\n\n@media (max-width: 768px) {\n  header.main-header {\n    padding-top: 1rem !important;\n  }\n\n  /* Adjust mobile menu position */\n  .mobile-menu {\n    margin-top: 0.5rem;\n  }\n}\n\n@media (max-width: 640px) {\n  header.main-header {\n    padding-top: 1.5rem !important;\n  }\n\n  /* Adjust mobile menu position */\n  .mobile-menu {\n    margin-top: 0.75rem;\n  }\n}\n"],"names":[],"mappings":"AAEA;EACE;;;;EAKA;;;;;AAKF;EACE;;;;EAKA"}}]
-}
