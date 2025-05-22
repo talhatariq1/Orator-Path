@@ -15,7 +15,6 @@ import dynamic from "next/dynamic";
 import { RedirectProvider } from "../lib/context/RedirectContext";
 
 // Use the client component wrapper
-const CanvasCursorWrapper = dynamic(() => import('./components/client/canvas-cursor-wrapper'));
 const HydrationFix = dynamic(() => import('./components/client/HydrationFix'));
 const SVDAttributeRemover = dynamic(() => import('./components/client/SVDAttributeRemover'));
 const AttributeDebugger = dynamic(() => import('./components/client/AttributeDebugger'));
@@ -56,7 +55,6 @@ export default function RootLayout({ children }) {
                   <div className="z-10">
                     <FooterWrapper />
                   </div>
-                  <CanvasCursorWrapper />
                 </ClerkLoaded>
               </div>
             </RedirectProvider>
