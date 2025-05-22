@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <title>Video Camera Icon</title>
-    <g stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15,8 L15,16 C15,16.5304 14.7893,17.0391 14.4142,17.4142 C14.0391,17.7893 13.5304,18 13,18 L3,18 C2.46957,18 1.96086,17.7893 1.58579,17.4142 C1.21071,17.0391 1,16.5304 1,16 L1,8 C1,7.46957 1.21071,6.96086 1.58579,6.58579 C1.96086,6.21071 2.46957,6 3,6 L13,6 C13.5304,6 14.0391,6.21071 14.4142,6.58579 C14.7893,6.96086 15,7.46957 15,8 Z" />
-        <path d="M15,12 L23,8 L23,16 L15,12 Z" />
-    </g>
-</svg>

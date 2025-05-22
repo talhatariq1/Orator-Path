@@ -1,29 +1,15 @@
-"use client";
-import React from "react";
-import HeroSection from "./components/HeroSection";
-import AnimatedFeaturesSection from "./components/AnimatedFeaturesSection";
-import SpeechPracticePlayground from "./components/SpeechPracticePlayground";
-import HorizontalTestimonialsSection from "./components/HorizontalTestimonialsSection";
-import SquishyPricingCards from "./components/SquishyPricingCards";
-
+import React from 'react'
+import Link from 'next/link'
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-black/30">
-      {/* UI Elements */}
-      <HeroSection />
-
-      {/* Animated Features Section with scroll animations */}
-      <AnimatedFeaturesSection />
-
-      {/* Interactive Speech Practice Playground */}
-      <SpeechPracticePlayground />
-
-      {/* Testimonials Section with horizontal scrolling */}
-      <HorizontalTestimonialsSection />
-
-      {/* Squishy Pricing Cards */}
-      <SquishyPricingCards />
-
-    </div>
-  );
+    <div className='flex items-center justify-center h-screen bg-gray-900'>
+<h1 className='text-4xl font-bold text-white tracking-wide drop-shadow-md'>
+<Link href='/audioanalaysis' className='text-white group-hover:text-gray-300 drop-shadow-md transition-all duration-300'>
+<span>
+Get Presentation Feedback
+</span>
+</Link>
+</h1>
+</div>
+  )
 }
