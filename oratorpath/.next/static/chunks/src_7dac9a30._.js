@@ -1,0 +1,511 @@
+(globalThis.TURBOPACK = globalThis.TURBOPACK || []).push([typeof document === "object" ? document.currentScript : undefined, {
+
+"[project]/src/lib/context/RedirectContext.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "RedirectProvider": (()=>RedirectProvider),
+    "useRedirect": (()=>useRedirect)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+"use client";
+;
+// Create a context for tracking redirection state
+const RedirectContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createContext"])({
+    isRedirecting: false,
+    setIsRedirecting: ()=>{}
+});
+function RedirectProvider({ children }) {
+    _s();
+    const [isRedirecting, setIsRedirecting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RedirectContext.Provider, {
+        value: {
+            isRedirecting,
+            setIsRedirecting
+        },
+        children: children
+    }, void 0, false, {
+        fileName: "[project]/src/lib/context/RedirectContext.jsx",
+        lineNumber: 16,
+        columnNumber: 5
+    }, this);
+}
+_s(RedirectProvider, "k6TW2E5hK0nKxRNLK3veIycHZSQ=");
+_c = RedirectProvider;
+function useRedirect() {
+    _s1();
+    return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(RedirectContext);
+}
+_s1(useRedirect, "gDsCjeeItUuvgOWf1v4qoK9RF6k=");
+var _c;
+__turbopack_context__.k.register(_c, "RedirectProvider");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/app/components/NavigationBar.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>NavigationBar)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$clerk$2d$react$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@clerk/clerk-react/dist/index.mjs [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/@clerk/nextjs/dist/esm/index.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$themes$2f$dist$2f$themes$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@clerk/themes/dist/themes/src/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$context$2f$RedirectContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/context/RedirectContext.jsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+;
+;
+;
+const navLinks = [
+    {
+        label: "Features",
+        href: "/#features"
+    },
+    {
+        label: "Playground",
+        href: "/#playground"
+    },
+    {
+        label: "Testimonials",
+        href: "/#testimonials"
+    },
+    {
+        label: "Pricing",
+        href: "/#pricing"
+    }
+];
+function NavigationBar() {
+    _s();
+    const [scrolled, setScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isDashboard, setIsDashboard] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])(); // Get current pathname - used for active link styling
+    const { isRedirecting } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$context$2f$RedirectContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRedirect"])(); // Get redirection state from context
+    // Check if we're in the dashboard, sign-in, or sign-up pages
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NavigationBar.useEffect": ()=>{
+            // Check if the pathname starts with /dashboard or is a sign-in/sign-up page
+            const dashboardActive = pathname.startsWith('/dashboard');
+            const isAuthPage = pathname.startsWith('/sign-in') || pathname.startsWith('/sign-up');
+            setIsDashboard(dashboardActive || isAuthPage);
+            // Also check for the body class (for client-side navigation)
+            const checkBodyClass = {
+                "NavigationBar.useEffect.checkBodyClass": ()=>{
+                    const hasDashboardClass = document.body.classList.contains('dashboard-active');
+                    setIsDashboard(hasDashboardClass || isAuthPage);
+                }
+            }["NavigationBar.useEffect.checkBodyClass"];
+            // Initial check
+            checkBodyClass();
+            // Set up a MutationObserver to watch for class changes on the body
+            const observer = new MutationObserver(checkBodyClass);
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: [
+                    'class'
+                ]
+            });
+            return ({
+                "NavigationBar.useEffect": ()=>{
+                    observer.disconnect();
+                }
+            })["NavigationBar.useEffect"];
+        }
+    }["NavigationBar.useEffect"], [
+        pathname
+    ]);
+    // Function to handle smooth scrolling
+    const handleSmoothScroll = (e, targetId)=>{
+        // Only apply smooth scroll on the homepage
+        if (pathname !== '/') return;
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            // Close mobile menu if open
+            if (mobileMenuOpen) setMobileMenuOpen(false);
+            // Smooth scroll to the target element
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    };
+    // Handle scroll effects
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "NavigationBar.useEffect": ()=>{
+            const handleScroll = {
+                "NavigationBar.useEffect.handleScroll": ()=>{
+                    const isScrolled = window.scrollY > 10;
+                    if (isScrolled !== scrolled) {
+                        setScrolled(isScrolled);
+                    }
+                }
+            }["NavigationBar.useEffect.handleScroll"];
+            window.addEventListener("scroll", handleScroll);
+            return ({
+                "NavigationBar.useEffect": ()=>{
+                    window.removeEventListener("scroll", handleScroll);
+                }
+            })["NavigationBar.useEffect"];
+        }
+    }["NavigationBar.useEffect"], [
+        scrolled
+    ]);
+    // Don't render the navigation bar if:
+    // 1. We're in the dashboard, sign-in, or sign-up pages
+    // 2. We're in the process of redirecting after login
+    if (isDashboard || isRedirecting) {
+        return null;
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+        className: `fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 py-2 bg-black/60 backdrop-blur-sm shadow-lg main-header`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "max-w-7xl mx-auto flex items-center justify-center px-6 py-1",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex-shrink-0 absolute left-6",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: "/",
+                            className: "flex items-center gap-2 cursor-pointer",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    src: "/Logo.PNG",
+                                    alt: "Logo",
+                                    width: 48,
+                                    height: 48,
+                                    className: "h-12 w-auto filter brightness-125 contrast-125",
+                                    style: {
+                                        objectFit: "contain"
+                                    },
+                                    priority: true
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                    lineNumber: 98,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                                    className: "text-2xl font-bold text-white",
+                                    children: "OratorPath"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                    lineNumber: 107,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                            lineNumber: 97,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                        className: "hidden lg:flex items-center justify-center px-8 py-3 rounded-full shadow-md bg-black/40 nav-border-animation",
+                        children: [
+                            navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "px-4 z-10 relative",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                        href: link.href,
+                                        className: "text-gray-300 hover:text-white transition duration-200 cursor-pointer text-base font-medium",
+                                        onClick: (e)=>handleSmoothScroll(e, link.href.replace('/#', '')),
+                                        children: link.label
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                        lineNumber: 117,
+                                        columnNumber: 15
+                                    }, this)
+                                }, link.label, false, {
+                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                    lineNumber: 116,
+                                    columnNumber: 13
+                                }, this)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "ml-2 z-10 relative",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["SignedOut"], {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            href: "/sign-in",
+                                            className: "px-5 py-2 bg-gradient-to-r from-purple-500 to-rose-500 text-white rounded-full hover:opacity-90 transition hover:shadow-lg hover:shadow-purple-500/20 flex items-center gap-2 cursor-pointer font-medium",
+                                            children: "Login"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                            lineNumber: 128,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                        lineNumber: 127,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["SignedIn"], {
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex items-center gap-3",
+                                            children: [
+                                                pathname === "/" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    href: "/dashboard",
+                                                    className: "px-5 py-2 bg-gradient-to-r from-purple-500 to-rose-500 text-white rounded-full hover:opacity-90 transition hover:shadow-lg hover:shadow-purple-500/20 flex items-center gap-2 cursor-pointer font-medium",
+                                                    children: "Dashboard"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                                    lineNumber: 141,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$clerk$2d$react$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["UserButton"], {
+                                                    appearance: {
+                                                        baseTheme: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$themes$2f$dist$2f$themes$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dark"],
+                                                        elements: {
+                                                            userButtonAvatarBox: "w-9 h-9 border-2 border-purple-400 rounded-full",
+                                                            userButtonTrigger: "focus:shadow-outline-purple",
+                                                            userButtonPopoverCard: "bg-gray-900 border border-gray-800",
+                                                            userButtonPopoverText: "text-white",
+                                                            userButtonPopoverActionButtonText: "text-white",
+                                                            userButtonPopoverFooterText: "text-gray-400"
+                                                        }
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                                    lineNumber: 150,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                            lineNumber: 139,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                        lineNumber: 137,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                lineNumber: 126,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                        lineNumber: 114,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex items-center gap-2 lg:hidden absolute right-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["SignedOut"], {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/sign-in",
+                                    className: "px-3 text-sm py-1 bg-gradient-to-r from-purple-500 to-rose-500 text-white rounded-full hover:opacity-90 transition flex items-center gap-1 cursor-pointer",
+                                    children: "Login"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                    lineNumber: 171,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                lineNumber: 170,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$nextjs$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["SignedIn"], {
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-center gap-2",
+                                    children: [
+                                        pathname === "/" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                            href: "/dashboard",
+                                            className: "px-3 text-sm py-1 bg-gradient-to-r from-purple-500 to-rose-500 text-white rounded-full hover:opacity-90 transition flex items-center gap-1 cursor-pointer",
+                                            children: "Dashboard"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                            lineNumber: 184,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$clerk$2d$react$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["UserButton"], {
+                                            appearance: {
+                                                baseTheme: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$clerk$2f$themes$2f$dist$2f$themes$2f$src$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dark"],
+                                                elements: {
+                                                    userButtonAvatarBox: "w-8 h-8 border-2 border-purple-400 rounded-full",
+                                                    userButtonTrigger: "focus:shadow-outline-purple",
+                                                    userButtonPopoverCard: "bg-gray-900 border border-gray-800",
+                                                    userButtonPopoverText: "text-white",
+                                                    userButtonPopoverActionButtonText: "text-white",
+                                                    userButtonPopoverFooterText: "text-gray-400"
+                                                }
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                            lineNumber: 193,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                    lineNumber: 182,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                lineNumber: 180,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: ()=>setMobileMenuOpen(!mobileMenuOpen),
+                                className: "text-white/70 hover:text-white/85 text-2xl",
+                                children: "☰"
+                            }, void 0, false, {
+                                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                                lineNumber: 208,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/src/app/components/NavigationBar.jsx",
+                        lineNumber: 169,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                lineNumber: 94,
+                columnNumber: 7
+            }, this),
+            mobileMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "lg:hidden bg-black/80 shadow-md nav-border-animation mx-4 my-2 rounded-xl mobile-menu",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex flex-col items-center py-4 space-y-4",
+                    children: navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                            href: link.href,
+                            className: "text-gray-300 hover:text-white transition duration-200 cursor-pointer",
+                            onClick: (e)=>{
+                                setMobileMenuOpen(false);
+                                handleSmoothScroll(e, link.href.replace('/#', ''));
+                            },
+                            children: link.label
+                        }, link.label, false, {
+                            fileName: "[project]/src/app/components/NavigationBar.jsx",
+                            lineNumber: 222,
+                            columnNumber: 15
+                        }, this))
+                }, void 0, false, {
+                    fileName: "[project]/src/app/components/NavigationBar.jsx",
+                    lineNumber: 220,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/src/app/components/NavigationBar.jsx",
+                lineNumber: 219,
+                columnNumber: 9
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/components/NavigationBar.jsx",
+        lineNumber: 91,
+        columnNumber: 5
+    }, this);
+}
+_s(NavigationBar, "K+jTUu1bnyPj6a6F6vTzXQUR9pA=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$context$2f$RedirectContext$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRedirect"]
+    ];
+});
+_c = NavigationBar;
+var _c;
+__turbopack_context__.k.register(_c, "NavigationBar");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+"[project]/src/app/components/FooterWrapper.jsx [app-client] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "default": (()=>FooterWrapper)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/shared/lib/app-dynamic.js [app-client] (ecmascript)");
+;
+;
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+const Footer = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.r("[project]/src/app/components/Footer.jsx [app-client] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i), {
+    loadableGenerated: {
+        modules: [
+            "[project]/src/app/components/Footer.jsx [app-client] (ecmascript, next/dynamic entry)"
+        ]
+    }
+});
+_c = Footer;
+const SimpleFooter = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$shared$2f$lib$2f$app$2d$dynamic$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])(()=>__turbopack_context__.r("[project]/src/app/components/SimpleFooter.jsx [app-client] (ecmascript, next/dynamic entry, async loader)")(__turbopack_context__.i), {
+    loadableGenerated: {
+        modules: [
+            "[project]/src/app/components/SimpleFooter.jsx [app-client] (ecmascript, next/dynamic entry)"
+        ]
+    }
+});
+_c1 = SimpleFooter;
+function FooterWrapper() {
+    _s();
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    const isRootPage = pathname === "/";
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: isRootPage ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Footer, {}, void 0, false, {
+            fileName: "[project]/src/app/components/FooterWrapper.jsx",
+            lineNumber: 16,
+            columnNumber: 21
+        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SimpleFooter, {}, void 0, false, {
+            fileName: "[project]/src/app/components/FooterWrapper.jsx",
+            lineNumber: 16,
+            columnNumber: 34
+        }, this)
+    }, void 0, false);
+}
+_s(FooterWrapper, "xbyQPtUVMO7MNj7WjJlpdWqRcTo=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+    ];
+});
+_c2 = FooterWrapper;
+var _c, _c1, _c2;
+__turbopack_context__.k.register(_c, "Footer");
+__turbopack_context__.k.register(_c1, "SimpleFooter");
+__turbopack_context__.k.register(_c2, "FooterWrapper");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(module, globalThis.$RefreshHelpers$);
+}
+}}),
+}]);
+
+//# sourceMappingURL=src_7dac9a30._.js.map

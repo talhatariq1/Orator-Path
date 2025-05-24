@@ -1,0 +1,15 @@
+/* [project]/src/app/styles/fonts.css [app-client] (css) */
+@font-face {
+  font-family: Cinzel Decorative Fallback;
+  src: local(Georgia);
+  ascent-override: 73.87%;
+  descent-override: 28.16%;
+  line-gap-override: 0.0%;
+  size-adjust: 132.12%;
+}
+
+:root {
+  --font-cinzel-decorative: "Cinzel Decorative", "Cinzel Decorative Fallback", serif;
+}
+
+/*# sourceMappingURL=src_app_styles_fonts_css_f9ee138c._.single.css.map*/
