@@ -48,6 +48,25 @@ export default function NavigationBar() {
     };
   }, [pathname]);
 
+  // Add a script to check logo loading
+  useEffect(() => {
+    const checkLogo = async () => {
+      try {
+        const response = await fetch('/images/logo.png');
+        console.log('Logo fetch status:', response.status);
+        if (!response.ok) {
+          console.error('Logo fetch failed:', response.statusText);
+        } else {
+          console.log('Logo fetched successfully.');
+        }
+      } catch (error) {
+        console.error('Error fetching logo:', error);
+      }
+    };
+
+    checkLogo();
+  }, []); // Run once on mount
+
   // Function to handle smooth scrolling
   const handleSmoothScroll = (e, targetId) => {
     // Only apply smooth scroll on the homepage
