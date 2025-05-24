@@ -96,8 +96,8 @@ export default function NavigationBar() {
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <Image
-              src="/Logo.PNG"
-              alt="Logo"
+              src="/logo.png"
+              alt="OratorPath Logo"
               width={48}
               height={48}
               className="h-12 w-auto filter brightness-125 contrast-125"
