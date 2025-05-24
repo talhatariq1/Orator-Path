@@ -14,6 +14,9 @@ export default function HeroSection() {
   // Ref for the hero image
   const heroImageRef = useRef(null);
 
+  // Ref for the SkillsOrbit container
+  const skillsOrbitRef = useRef(null);
+
   // Effect for mouse parallax
   useEffect(() => {
     if (!heroRef.current) return;
@@ -55,6 +58,13 @@ export default function HeroSection() {
       heroImageRef.current.style.filter = 'contrast(1.05) brightness(1.15)';
     }
   }, []);
+
+  // Effect to measure SkillsOrbit height
+  useEffect(() => {
+    if (skillsOrbitRef.current) {
+      console.log('SkillsOrbit rendered height:', skillsOrbitRef.current.offsetHeight);
+    }
+  }, [skillsOrbitRef]);
 
   return (
     <section ref={heroRef} className="relative pt-32 pb-32 overflow-hidden px-4 flex items-center justify-center min-h-[85vh]">
@@ -199,31 +209,39 @@ export default function HeroSection() {
             initial={{ opacity: 1, scale: 0.8, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex flex-col items-center"
+            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex items-center justify-center md:justify-end"
             data-speed="0.6"
           >
-            {/* SkillsOrbit */}
-            <motion.div
-              initial={{ opacity: 1, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.2, delay: 0.5 }}
-              className="w-full h-auto flex items-center justify-center z-20 mix-blend-lighten"
-            >
-              <SkillsOrbit />
-            </motion.div>
-
-            {/* Hero image positioned below SkillsOrbit with very large top margin */}
-            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 mt-[800px]">
-              <Image
-                src="/images/hero3d.webp"
-                alt="3D OratorPath illustration"
-                priority
-                quality={100}
-                width={800}
-                height={600}
-                sizes="(max-width: 768px) 100vw, 800px"
-                className="w-full h-auto object-contain"
-              />
+            {/* Container for SkillsOrbit and Hero Image */}
+            <div className="relative rounded-lg overflow-hidden bg-transparent w-full max-w-lg mx-auto">
+              {/* SkillsOrbit wrapper */}
+              <div className="absolute inset-0 z-20 mix-blend-lighten flex items-center justify-center">
+                <motion.div
+                  initial={{ opacity: 1, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1.2, delay: 0.5 }}
+                  className="w-full h-full"
+                >
+                  <SkillsOrbit />
+                </motion.div>
+              </div>
+              {/* Image container */}
+              <div ref={heroImageRef} className="flex items-center justify-center">
+                  <Image
+                    src="/images/hero3d.webp"
+                    alt="3D OratorPath illustration"
+                    width={450}
+                    height={450}
+                    className="rounded-lg relative z-10 hero-image-transparent"
+                    priority
+                    style={{ objectFit: 'contain' }}
+                    onLoadingComplete={(img) => {
+                      // Ensure brightness is applied as soon as the image loads
+                      img.style.opacity = '1';
+                      img.style.filter = 'contrast(1) brightness(1)';
+                    }}
+                  />
+              </div>
             </div>
           </motion.div>
         </div>
