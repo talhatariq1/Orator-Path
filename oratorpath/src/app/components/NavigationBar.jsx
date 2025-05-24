@@ -95,20 +95,14 @@ export default function NavigationBar() {
         {/* Logo Section - positioned to the left */}
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <Image
-              src="/images/logo.png"
+            <img
+              src="/logo.png"
               alt="OratorPath Logo"
               width={48}
               height={48}
               className="h-12 w-auto filter brightness-125 contrast-125"
               style={{ objectFit: "contain" }}
-              priority
-              unoptimized
-              onError={(e) => {
-                console.error('Error loading logo:', e);
-                // Fallback to the root logo if the images directory one fails
-                e.target.src = '/logo.png';
-              }}
+              loading="eager"
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
