@@ -14,7 +14,6 @@ import Loader from "./components/Loader";
 import NavigationBar from "./components/NavigationBar";
 import FooterWrapper from "./components/FooterWrapper";
 import { RedirectProvider } from "../lib/context/RedirectContext";
-import Header from "./components/Header";
 
 // Fonts are now imported from lib/fonts.js
 
