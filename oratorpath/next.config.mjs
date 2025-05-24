@@ -19,8 +19,7 @@ const nextConfig = {
     },
     // Disable experimental features that might be causing font issues
     experimental: {
-      turbo: false, // Disable Turbopack
-      optimizeFonts: true,
+      // Removed invalid options
     },
   };
 
