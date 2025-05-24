@@ -1,0 +1,23 @@
+/* Responsive styles for navigation bar */
+
+@media (max-width: 768px) {
+  header.main-header {
+    padding-top: 1rem !important;
+  }
+
+  /* Adjust mobile menu position */
+  .mobile-menu {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  header.main-header {
+    padding-top: 1.5rem !important;
+  }
+
+  /* Adjust mobile menu position */
+  .mobile-menu {
+    margin-top: 0.75rem;
+  }
+}

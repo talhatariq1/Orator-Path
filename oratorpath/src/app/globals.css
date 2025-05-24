@@ -1,0 +1,638 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: 74 109 255;
+  --color-secondary: 136 58 234;
+  --color-accent: 14 165 233;
+}
+
+@layer base {
+  /* Font utility classes */
+  .font-body {
+    font-family: var(--font-noto-serif, 'Noto Serif', serif);
+  }
+
+  .font-heading {
+    font-family: var(--font-cinzel-decorative, 'Cinzel Decorative', serif);
+  }
+
+  .font-mono {
+    font-family: var(--font-geist-mono, monospace);
+  }
+
+  /* Nathan font class for specific elements */
+  .font-nathan {
+    font-family: var(--font-nathan, 'Nathan', cursive);
+  }
+
+  /* Courier New font class */
+  .font-courier {
+    font-family: var(--font-courier-new, 'Courier New', monospace);
+  }
+
+  /* Cinzel Decorative font class */
+  .font-cinzel-decorative {
+    font-family: var(--font-cinzel-decorative, 'Cinzel Decorative', serif);
+  }
+
+  /* Noto Serif font class */
+  .font-noto-serif {
+    font-family: var(--font-noto-serif, 'Noto Serif', serif);
+  }
+
+  /* Inter font class */
+  .font-inter {
+    font-family: var(--font-inter, 'Inter', sans-serif);
+  }
+
+  /* Space Grotesk font class */
+  .font-space-grotesk {
+    font-family: var(--font-space-grotesk, 'Space Grotesk', sans-serif);
+  }
+
+  :root {
+    --background: 10 10 12;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  font-family: var(--font-noto-serif, 'Noto Serif', serif);
+  background: #000000;
+  color: #f1f5f9;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cinzel-decorative, 'Cinzel Decorative', serif);
+}
+
+/* Morphing text animation */
+.morphing-word-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* 3D perspective for text morphing */
+.perspective-text {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(123, 74, 226, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(123, 74, 226, 0.7);
+}
+
+/* Text blur effect */
+.text-glow {
+  text-shadow: 0 0 15px rgba(123, 74, 226, 0.5);
+}
+
+.blue-glow {
+  text-shadow: 0 0 15px rgba(76, 109, 255, 0.6);
+}
+
+.purple-glow {
+  text-shadow: 0 0 15px rgba(138, 58, 234, 0.6);
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500;
+  background-size: 200% auto;
+  animation: gradientText 8s linear infinite;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90vh;
+  padding: 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-grad {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, #4C6DFF, #8A3AEA);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+}
+
+.btn-grad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s;
+}
+
+.btn-grad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(76, 109, 255, 0.4);
+}
+
+.btn-grad:hover::before {
+  left: 100%;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 3rem;
+  text-align: center;
+  background: #0F111A;
+  position: relative;
+}
+
+.feature-card {
+  background: rgba(20, 22, 30, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(76, 109, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(76, 109, 255, 0.15);
+  border-color: rgba(76, 109, 255, 0.4);
+}
+
+/* Animate on scroll class */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated border gradient */
+.border-gradient {
+  position: relative;
+  border-radius: 15px;
+  padding: 1px;
+  background: linear-gradient(90deg, #4C6DFF, #8A3AEA, #0EA5E9, #4C6DFF);
+  background-size: 300% 100%;
+  animation: gradientBorder 8s linear infinite;
+}
+
+.border-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 14px;
+  background: #0A0A0C;
+  z-index: -1;
+}
+
+/* Enhanced navigation bar styles */
+.nav-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.border-glow {
+  box-shadow: 0 0 10px rgba(123, 74, 226, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced navigation bar border animation */
+.nav-border-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-border-animation::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Border width */
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.6), rgba(236, 72, 153, 0.6), rgba(251, 191, 36, 0.6), rgba(168, 85, 247, 0.6));
+  background-size: 300% 300%;
+  animation: shine 8s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Shine animation for border gradient */
+@keyframes shine {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Blur effect for seeing through navigation elements */
+.nav-glass {
+  background: rgba(10, 10, 12, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes gradientBorder {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 50% 25%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 75%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Hero image styles */
+.hero-image-transparent {
+  /* Remove background using mix-blend-mode */
+  mix-blend-mode: multiply;
+  /* Remove any remnants of background color */
+  background-color: transparent !important;
+}
+
+/* Clerk Account Management Modal - Dark Theme (Global) */
+.cl-modalBackdrop .cl-card,
+.cl-internal-b3fm6y {
+  background-color: #1a1b20 !important;
+  border-color: #2c2d32 !important;
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-headerTitle,
+.cl-modalBackdrop .cl-headerSubtitle,
+.cl-modalBackdrop .cl-profileSectionTitle,
+.cl-modalBackdrop .cl-profileSectionTitleText,
+.cl-modalBackdrop .cl-identityPreviewText,
+.cl-modalBackdrop .cl-accordionTriggerButton,
+.cl-modalBackdrop .cl-formButtonPrimary,
+.cl-modalBackdrop .cl-formFieldLabel,
+.cl-modalBackdrop .cl-formFieldInput,
+.cl-modalBackdrop .cl-formFieldInfoText,
+.cl-modalBackdrop .cl-main,
+.cl-modalBackdrop .cl-navbarButton,
+.cl-modalBackdrop .cl-breadcrumbsItem,
+.cl-modalBackdrop .cl-pageTitle,
+.cl-modalBackdrop .cl-pageTitleText,
+.cl-modalBackdrop .cl-profileSectionContent,
+.cl-modalBackdrop .cl-profileSectionPrimaryButton,
+.cl-modalBackdrop .cl-profileSectionSecondaryButton,
+.cl-modalBackdrop .cl-profileSectionDestructiveButton,
+.cl-modalBackdrop .cl-userPreviewMainIdentifier,
+.cl-modalBackdrop .cl-userPreviewSecondaryIdentifier,
+.cl-modalBackdrop .cl-profileSectionTitle,
+.cl-modalBackdrop .cl-profileSectionTitleText,
+.cl-modalBackdrop .cl-accordionContent,
+.cl-modalBackdrop .cl-accordionTriggerButton,
+.cl-modalBackdrop .cl-internal-wkkub3,
+.cl-modalBackdrop .cl-internal-13zhnx0,
+.cl-modalBackdrop .cl-internal-1qgglew,
+.cl-modalBackdrop .cl-internal-1u45qm6,
+.cl-modalBackdrop .cl-internal-1ck0y9k,
+.cl-modalBackdrop .cl-internal-1d3kbxx {
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-formFieldInput,
+.cl-modalBackdrop .cl-socialButtonsBlockButton,
+.cl-modalBackdrop .cl-identityPreview {
+  background-color: #232429 !important;
+  border-color: #2c2d32 !important;
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-footerActionLink,
+.cl-modalBackdrop .cl-footerActionText,
+.cl-modalBackdrop .cl-profileSectionSubtitle,
+.cl-modalBackdrop .cl-internal-1ydw1k6,
+.cl-modalBackdrop .cl-internal-7n2gha {
+  color: #a1a1aa !important;
+}
+
+.cl-modalBackdrop .cl-formButtonReset {
+  color: #a1a1aa !important;
+  background: transparent !important;
+}
+
+.cl-modalBackdrop .cl-formButtonPrimary {
+  background: linear-gradient(to right, #4c6dff, #8a3aea) !important;
+  border: none !important;
+}
+
+.cl-modalBackdrop .cl-formButtonPrimary:hover {
+  opacity: 0.9 !important;
+}
+
+/* Fix for any SVG icons in the modal */
+.cl-modalBackdrop svg {
+  color: white !important;
+}
+
+/* Fix for tabs and active states */
+.cl-modalBackdrop .cl-navbarButton[data-active="true"] {
+  color: #4c6dff !important;
+  border-color: #4c6dff !important;
+}
+
+.cl-modalBackdrop .cl-navbarButton:hover {
+  background-color: rgba(76, 109, 255, 0.1) !important;
+}
+
+/* Fix for buttons and interactive elements */
+.cl-modalBackdrop .cl-profileSectionPrimaryButton {
+  background: linear-gradient(to right, #4c6dff, #8a3aea) !important;
+  border: none !important;
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-profileSectionPrimaryButton:hover {
+  opacity: 0.9 !important;
+}
+
+.cl-modalBackdrop .cl-profileSectionSecondaryButton {
+  background-color: #232429 !important;
+  border-color: #2c2d32 !important;
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-profileSectionDestructiveButton {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+  color: rgb(239, 68, 68) !important;
+}
+
+/* Fix for connected accounts section */
+.cl-modalBackdrop .cl-profileSectionContent__connectedAccounts {
+  background-color: #232429 !important;
+  border-color: #2c2d32 !important;
+}
+
+/* Fix for the close button */
+.cl-modalBackdrop .cl-modalCloseButton {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.cl-modalBackdrop .cl-modalCloseButton:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Fix for badges */
+.cl-modalBackdrop .cl-badge,
+.cl-modalBackdrop .cl-badge.cl-badgePrimary {
+  background-color: #4c6dff !important;
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-badge.cl-badgeSecondary {
+  background-color: #232429 !important;
+  color: #a1a1aa !important;
+}
+
+/* Additional styles for specific elements in the account management modal */
+.cl-modalBackdrop .cl-identityPreviewText,
+.cl-modalBackdrop .cl-identityPreviewText span {
+  color: white !important;
+}
+
+/* Style for update buttons */
+.cl-modalBackdrop .cl-profileSectionPrimaryButton,
+.cl-modalBackdrop .cl-button.cl-button-primary {
+  background: linear-gradient(to right, #4c6dff, #8a3aea) !important;
+  border: none !important;
+  color: white !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.cl-modalBackdrop .cl-profileSectionPrimaryButton:hover,
+.cl-modalBackdrop .cl-button.cl-button-primary:hover {
+  opacity: 0.9 !important;
+}
+
+/* Style for the account sidebar */
+.cl-modalBackdrop .cl-navbar,
+.cl-modalBackdrop .cl-navbar-menu {
+  background-color: #1a1b20 !important;
+  border-color: #2c2d32 !important;
+}
+
+/* Style for the account sidebar items */
+.cl-modalBackdrop .cl-navbar-button {
+  color: white !important;
+}
+
+.cl-modalBackdrop .cl-navbar-button:hover {
+  background-color: rgba(76, 109, 255, 0.1) !important;
+}
+
+.cl-modalBackdrop .cl-navbar-button[data-active="true"] {
+  color: #4c6dff !important;
+  background-color: rgba(76, 109, 255, 0.1) !important;
+}
+
+/* Style for the account page content */
+.cl-modalBackdrop .cl-pageContent {
+  background-color: #1a1b20 !important;
+}
+
+/* Style for the account page header */
+.cl-modalBackdrop .cl-pageHeader {
+  border-color: #2c2d32 !important;
+}
+
+/* Style for the account page title */
+.cl-modalBackdrop .cl-pageTitle {
+  color: white !important;
+}
+
+/* Style for the account page subtitle */
+.cl-modalBackdrop .cl-pageSubtitle {
+  color: #a1a1aa !important;
+}
+
+/* Style for the account page divider */
+.cl-modalBackdrop .cl-divider {
+  background-color: #2c2d32 !important;
+}
+
+/* Style for the account page input fields */
+.cl-modalBackdrop .cl-input {
+  background-color: #232429 !important;
+  border-color: #2c2d32 !important;
+  color: white !important;
+}
+
+/* Style for the account page input field labels */
+.cl-modalBackdrop .cl-label {
+  color: white !important;
+}
+
+/* Style for the account page input field placeholders */
+.cl-modalBackdrop .cl-input::placeholder {
+  color: #a1a1aa !important;
+}
+
+/* Style for the account page buttons */
+.cl-modalBackdrop .cl-button {
+  color: white !important;
+}
+
+/* Style for the account page action buttons */
+.cl-modalBackdrop .cl-action-button {
+  color: #4c6dff !important;
+}
+
+/* Style for the account page action buttons on hover */
+.cl-modalBackdrop .cl-action-button:hover {
+  color: #8a3aea !important;
+}
+
+/* Always bright hero image that doesn't depend on mouse interaction */
+.always-bright {
+  filter: contrast(1.05) brightness(1.15) !important;
+  transition: none !important;
+  opacity: 1 !important;
+  animation: subtle-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes subtle-glow {
+  0% { filter: contrast(1.05) brightness(1.15); }
+  100% { filter: contrast(1.1) brightness(1.2); }
+}
+
+/* Infinite scrolling animation for testimonials */
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+/* Modern Testimonial Cards - Core Styles */
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Testimonial quote mark */
+.quote-mark {
+  position: absolute;
+  opacity: 0.1;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+
+/* Avatar style enhancements */
+.avatar-glow {
+  position: relative;
+}
+
+.avatar-glow::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(45deg, #4C6DFF, #8A3AEA);
+  border-radius: inherit;
+  opacity: 0.6;
+  filter: blur(3px);
+  transition: opacity 0.3s ease;
+}
+
+/* Card hover effects */
+.testimonial-card:hover .avatar-glow::before {
+  opacity: 0.8;
+}
+
+.testimonial-card:hover .quote-mark {
+  opacity: 0.15;
+  transform: scale(1.6) rotate(5deg);
+}
+
+/* Animation delay utilities */
+.animation-delay-150 {
+  animation-delay: 150ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Hide scrollbar for clean UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
