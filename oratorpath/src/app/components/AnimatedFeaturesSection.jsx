@@ -177,7 +177,7 @@ export default function AnimatedFeaturesSection() {
             ref={imageContainerRef}
           >
             <AnimatedImage
-              src="/features/svgviewer-output.svg"
+              src="/images/svgviewer-output.svg"
               alt="AI Speech Coach"
               isInView={isImageContainerInView}
             />
