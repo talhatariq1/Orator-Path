@@ -119,6 +119,7 @@ export default function NavigationBar() {
               alt="OratorPath Logo"
               width={48}
               height={48}
+              style={{ border: '2px solid red' }}
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
