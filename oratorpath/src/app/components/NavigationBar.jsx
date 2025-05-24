@@ -104,6 +104,11 @@ export default function NavigationBar() {
               style={{ objectFit: "contain" }}
               priority
               unoptimized
+              onError={(e) => {
+                console.error('Error loading logo:', e);
+                // Fallback to the root logo if the images directory one fails
+                e.target.src = '/logo.png';
+              }}
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
