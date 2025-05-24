@@ -117,7 +117,8 @@ export default function NavigationBar() {
             <img
               src="/images/logo.png"
               alt="OratorPath Logo"
-              className="h-12 w-auto filter brightness-125 contrast-125 object-contain"
+              width={48}
+              height={48}
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
