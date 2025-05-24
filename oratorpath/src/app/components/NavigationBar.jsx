@@ -52,7 +52,7 @@ export default function NavigationBar() {
   useEffect(() => {
     const checkLogo = async () => {
       try {
-        const response = await fetch('/images/logo.png');
+        const response = await fetch('/images/logo.webp'); // Check for webp
         console.log('Logo fetch status:', response.status);
         if (!response.ok) {
           console.error('Logo fetch failed:', response.statusText);
@@ -115,11 +115,10 @@ export default function NavigationBar() {
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <img
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="OratorPath Logo"
               width={48}
               height={48}
-              style={{ border: '2px solid red' }}
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
