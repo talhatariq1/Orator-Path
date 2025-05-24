@@ -1,9 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import useCanvasCursor from '../../hooks/use-canvasCursor';
+// import { useEffect, useState } from 'react';
+// import useCanvasCursor from '../../hooks/use-canvasCursor';
 
 const CanvasCursor = () => {
+  // Temporarily disabled canvas cursor to fix deployment issues
+  return null;
+  
+  /* Original implementation
   const [isDashboard, setIsDashboard] = useState(false);
 
   useEffect(() => {
@@ -34,6 +38,7 @@ const CanvasCursor = () => {
   }
 
   return <canvas className='pointer-events-none fixed inset-0 z-10' id='canvas' />;
+  */
 };
 
 export default CanvasCursor;

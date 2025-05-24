@@ -1,3 +1,14 @@
+// Temporarily disabled image processing to fix deployment issues
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  return NextResponse.json({ 
+    success: false, 
+    message: 'Image processing temporarily disabled for deployment' 
+  }, { status: 503 });
+}
+
+/* Original implementation
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
@@ -53,3 +64,4 @@ export async function GET() {
     }, { status: 500 });
   }
 }
+*/
