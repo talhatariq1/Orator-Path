@@ -15,7 +15,7 @@ const SimpleFooter = () => {
           {/* Logo and copyright */}
           <div className="flex items-center gap-3">
             <Image
-              src="/Logo.PNG"
+              src="/logo.png"
               alt="OratorPath Logo"
               width={32}
               height={32}

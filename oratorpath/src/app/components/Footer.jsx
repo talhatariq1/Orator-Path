@@ -56,7 +56,7 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/Logo.PNG"
+                src="/logo.png"
                 alt="OratorPath Logo"
                 width={40}
                 height={40}

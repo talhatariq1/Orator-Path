@@ -71,7 +71,7 @@ export default function Page() {
       <div className="mb-6">
         <Link href="/" className="flex items-center gap-2 cursor-pointer">
           <Image
-            src="/Logo.PNG"
+            src="/logo.png"
             alt="Logo"
             width={48}
             height={48}
