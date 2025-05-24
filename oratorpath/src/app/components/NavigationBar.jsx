@@ -98,12 +98,7 @@ export default function NavigationBar() {
             <img
               src="/images/logo.png"
               alt="OratorPath Logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto filter brightness-125 contrast-125"
-              style={{ objectFit: "contain" }}
-              loading="eager"
-              decoding="async"
+              className="h-12 w-auto filter brightness-125 contrast-125 object-contain"
             />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
