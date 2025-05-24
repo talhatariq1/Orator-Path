@@ -199,12 +199,13 @@ export default function HeroSection() {
             initial={{ opacity: 1, scale: 0.8, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex items-center justify-center md:justify-end"
+            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex flex-col items-center md:items-end justify-center"
             data-speed="0.6"
           >
-            {/* Hero image with glass effect */}
-            <div className="relative rounded-lg overflow-hidden bg-transparent w-full max-w-lg mx-auto">
-              <div className="absolute inset-0 z-20 mix-blend-lighten flex items-center justify-center">
+            {/* Container for SkillsOrbit and Hero Image */}
+            <div className="relative rounded-lg overflow-hidden bg-transparent w-full max-w-lg mx-auto flex flex-col items-center">
+              {/* SkillsOrbit */}
+              <div className="relative z-20 mix-blend-lighten flex items-center justify-center w-full">
                 <motion.div
                   initial={{ opacity: 1, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -214,8 +215,9 @@ export default function HeroSection() {
                   <SkillsOrbit />
                 </motion.div>
               </div>
-              <div className="flex items-center justify-center">
-                <div ref={heroImageRef} >
+              {/* Hero image */}
+              <div className="flex items-center justify-center w-full mt-8">
+                <div ref={heroImageRef}>
                   <div className="relative z-10">
                     <Image
                       src="/images/hero3d.webp"
