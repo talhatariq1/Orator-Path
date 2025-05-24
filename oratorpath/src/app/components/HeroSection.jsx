@@ -216,20 +216,18 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center justify-center">
                 <div ref={heroImageRef} >
-                  <Image
-                    src="/hero3d.png"
-                    alt="Public Speaking Illustration"
-                    width={450}
-                    height={450}
-                    className="rounded-lg relative z-10 hero-image-transparent"
-                    priority
-                    style={{ objectFit: 'contain' }}
-                    onLoadingComplete={(img) => {
-                      // Ensure brightness is applied as soon as the image loads
-                      img.style.opacity = '1';
-                      img.style.filter = 'contrast(1) brightness(1)';
-                    }}
-                  />
+                  <div className="relative z-10">
+                    <Image
+                      src="/images/hero3d.webp"
+                      alt="3D OratorPath illustration"
+                      priority
+                      quality={100}
+                      width={800}
+                      height={600}
+                      sizes="(max-width: 768px) 100vw, 800px"
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
