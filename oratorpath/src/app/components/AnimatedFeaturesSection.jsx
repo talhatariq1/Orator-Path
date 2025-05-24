@@ -58,7 +58,7 @@ const FloatingCard = ({ icon, title, description, index, isContainerInView }) =>
 };
 
 // Optimized AnimatedImage component
-const AnimatedImage = ({ src, alt, isInView }) => {
+const AnimatedImage = ({ src, alt, isInView, unoptimized }) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -73,6 +73,7 @@ const AnimatedImage = ({ src, alt, isInView }) => {
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-contain"
+          unoptimized={unoptimized}
         />
       </div>
 
@@ -180,6 +181,7 @@ export default function AnimatedFeaturesSection() {
               src="/images/svgviewer-output.svg"
               alt="AI Speech Coach"
               isInView={isImageContainerInView}
+              unoptimized
             />
 
             {/* Stats cards with reveal animation */}
