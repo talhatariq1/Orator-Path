@@ -95,19 +95,16 @@ export default function NavigationBar() {
         {/* Logo Section - positioned to the left */}
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <div className="relative h-12 w-12">
-              <img
-                src="/_next/static/media/logo.png"
-                alt="OratorPath Logo"
-                className="w-full h-full object-contain filter brightness-125 contrast-125"
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto'
-                }}
-                loading="eager"
-                decoding="async"
-              />
-            </div>
+            <img
+              src="/images/logo.png"
+              alt="OratorPath Logo"
+              width={48}
+              height={48}
+              className="h-12 w-auto filter brightness-125 contrast-125"
+              style={{ objectFit: "contain" }}
+              loading="eager"
+              decoding="async"
+            />
             <h1 className="text-2xl font-bold text-white">
               OratorPath
             </h1>
