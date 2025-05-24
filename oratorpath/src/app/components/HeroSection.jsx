@@ -212,8 +212,8 @@ export default function HeroSection() {
               <SkillsOrbit />
             </motion.div>
 
-            {/* Hero image positioned below SkillsOrbit with large top margin */}
-            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 mt-[600px]">
+            {/* Hero image positioned below SkillsOrbit with very large top margin */}
+            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 mt-[800px]">
               <Image
                 src="/images/hero3d.webp"
                 alt="3D OratorPath illustration"
