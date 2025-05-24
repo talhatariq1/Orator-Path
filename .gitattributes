@@ -4,3 +4,8 @@
 *.svg filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
+oratorpath/src/lib/models/Vosk-model-en-us-0.42-gigaspeech/am/final.mdl filter=lfs diff=lfs merge=lfs -text
+oratorpath/src/lib/models/Vosk-model-en-us-0.42-gigaspeech/graph/HCLG.fst filter=lfs diff=lfs merge=lfs -text
+oratorpath/src/lib/models/Vosk-model-en-us-0.42-gigaspeech/rescore/G.carpa filter=lfs diff=lfs merge=lfs -text
+oratorpath/src/lib/models/Vosk-model-en-us-0.42-gigaspeech/rescore/G.fst filter=lfs diff=lfs merge=lfs -text
+oratorpath/src/lib/models/Vosk-model-en-us-0.42-gigaspeech/rnnlm/final.raw filter=lfs diff=lfs merge=lfs -text

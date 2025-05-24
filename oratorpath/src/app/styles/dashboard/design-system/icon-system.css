@@ -1,0 +1,222 @@
+/* 
+  Icon System Styles
+  Orator Path Dashboard Icon Visual Design
+*/
+
+/* Icon base styles */
+.dashboard-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: all var(--transition-fast);
+}
+
+/* Icon placeholder while loading */
+.dashboard-icon-placeholder {
+  background-color: rgba(var(--color-border), 0.5);
+  border-radius: var(--radius-sm);
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Icon Grid Component */
+.dashboard-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: var(--space-md);
+}
+
+.dashboard-icon-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-xs);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dashboard-icon-grid-item:hover {
+  background-color: rgba(var(--color-primary), 0.05);
+}
+
+.dashboard-icon-grid-label {
+  margin-top: var(--space-xs);
+  font-size: 0.75rem;
+  color: rgb(var(--color-text-tertiary));
+  text-align: center;
+}
+
+/* Icon with text */
+.icon-with-text {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+/* Icon sizes */
+.icon-xs {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-md {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-lg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-xl {
+  width: 48px;
+  height: 48px;
+}
+
+/* Icon colors based on design system */
+.icon-primary {
+  color: rgb(var(--color-primary));
+}
+
+.icon-secondary {
+  color: rgb(var(--color-secondary));
+}
+
+.icon-accent {
+  color: rgb(var(--color-accent));
+}
+
+.icon-success {
+  color: rgb(var(--color-success));
+}
+
+.icon-warning {
+  color: rgb(var(--color-warning));
+}
+
+.icon-error {
+  color: rgb(var(--color-error));
+}
+
+.icon-info {
+  color: rgb(var(--color-info));
+}
+
+/* Icon backgrounds */
+.icon-bg {
+  padding: var(--space-2xs);
+  border-radius: var(--radius-md);
+}
+
+.icon-bg-primary {
+  background-color: rgba(var(--color-primary), 0.1);
+  color: rgb(var(--color-primary));
+}
+
+.icon-bg-secondary {
+  background-color: rgba(var(--color-secondary), 0.1);
+  color: rgb(var(--color-secondary));
+}
+
+.icon-bg-accent {
+  background-color: rgba(var(--color-accent), 0.1);
+  color: rgb(var(--color-accent));
+}
+
+.icon-bg-success {
+  background-color: rgba(var(--color-success), 0.1);
+  color: rgb(var(--color-success));
+}
+
+.icon-bg-warning {
+  background-color: rgba(var(--color-warning), 0.1);
+  color: rgb(var(--color-warning));
+}
+
+.icon-bg-error {
+  background-color: rgba(var(--color-error), 0.1);
+  color: rgb(var(--color-error));
+}
+
+.icon-bg-info {
+  background-color: rgba(var(--color-info), 0.1);
+  color: rgb(var(--color-info));
+}
+
+/* Icon animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* Icon button */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: var(--space-2xs);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.icon-button:hover {
+  background-color: rgba(var(--color-surface), 0.8);
+}
+
+.icon-button:focus {
+  outline: 2px solid rgba(var(--color-primary), 0.5);
+  outline-offset: 1px;
+}
+
+/* Icon with badge */
+.icon-with-badge {
+  position: relative;
+  display: inline-flex;
+}
+
+.icon-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 var(--space-3xs);
+  border-radius: 9999px;
+  background-color: rgb(var(--color-error));
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  }
+  
+  .icon-xl {
+    width: 36px;
+    height: 36px;
+  }
+}
