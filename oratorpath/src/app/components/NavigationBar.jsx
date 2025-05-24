@@ -96,7 +96,7 @@ export default function NavigationBar() {
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <Image
-              src="/logo.png"
+              src="/OP-New.png"
               alt="Logo"
               width={48}
               height={48}

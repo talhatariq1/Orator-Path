@@ -1,4 +1,5 @@
 import { getFontVariables } from './lib/fonts';
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles/fonts.css"; // Import the direct font loading CSS
 import "./styles/grid-background.css";
@@ -6,12 +7,14 @@ import "./styles/speech-playground.css";
 import "./styles/pricing-section.css";
 import "./styles/navigation-responsive.css";
 import "./styles/layout-transitions.css";
+import "./styles/custom.css";
 import { ClerkProvider, ClerkLoaded, ClerkLoading } from "@clerk/nextjs";
 import { dark } from '@clerk/themes';
 import Loader from "./components/Loader";
 import NavigationBar from "./components/NavigationBar";
 import FooterWrapper from "./components/FooterWrapper";
 import { RedirectProvider } from "../lib/context/RedirectContext";
+import Header from "./components/Header";
 
 // Fonts are now imported from lib/fonts.js
 
