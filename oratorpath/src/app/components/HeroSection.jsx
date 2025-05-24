@@ -202,18 +202,18 @@ export default function HeroSection() {
             className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex flex-col items-center md:items-end justify-center"
             data-speed="0.6"
           >
-            {/* SkillsOrbit directly as a child of the flex container */}
+            {/* SkillsOrbit */}
             <motion.div
               initial={{ opacity: 1, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="w-full h-full flex items-center justify-center z-20 mix-blend-lighten"
+              className="w-full h-auto flex items-center justify-center z-20 mix-blend-lighten"
             >
               <SkillsOrbit />
             </motion.div>
 
-            {/* Hero image directly as a child of the flex container */}
-            <div ref={heroImageRef} className="flex items-center justify-center w-full mt-8 z-10">
+            {/* Hero image */}
+            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 relative" style={{ top: '-80px' }}>
               <Image
                 src="/images/hero3d.webp"
                 alt="3D OratorPath illustration"
