@@ -95,18 +95,32 @@ export default function NavigationBar() {
         {/* Logo Section - positioned to the left */}
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <div 
-              className="h-12 w-12 bg-contain bg-no-repeat bg-center relative"
-              style={{
-                backgroundImage: 'url(/logo.png)',
-                filter: 'brightness(1.25) contrast(1.25)'
-              }}
-              role="img"
-              aria-label="OratorPath Logo"
-            >
-              {/* Fallback SVG if background image fails to load */}
+            <div className="relative h-12 w-12">
+              {/* Primary logo */}
+              <img
+                src="/static/logo.webp"
+                alt="OratorPath Logo"
+                className="absolute inset-0 w-full h-full object-contain filter brightness-125 contrast-125"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  document.getElementById('fallback-logo').style.display = 'block';
+                }}
+              />
+              {/* Fallback logo */}
+              <img
+                id="fallback-logo"
+                src="/logo.png"
+                alt="OratorPath Logo"
+                className="absolute inset-0 w-full h-full object-contain filter brightness-125 contrast-125 hidden"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  document.getElementById('svg-logo').style.display = 'block';
+                }}
+              />
+              {/* SVG fallback */}
               <svg
-                className="absolute inset-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity"
+                id="svg-logo"
+                className="absolute inset-0 w-full h-full hidden"
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
