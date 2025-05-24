@@ -95,26 +95,33 @@ export default function NavigationBar() {
         {/* Logo Section - positioned to the left */}
         <div className="flex-shrink-0 absolute left-6">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
-            <Image
-              src="/assets/logo.png"
-              alt="OratorPath Logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto filter brightness-125 contrast-125"
-              style={{ objectFit: "contain" }}
-              priority={true}
-              quality={100}
-              sizes="48px"
-              onError={(e) => {
-                console.error('Error loading logo:', e);
-                // Try fallback paths if the main path fails
-                if (e.target.src.includes('/assets/')) {
-                  e.target.src = '/logo.png';
-                } else if (e.target.src.includes('/logo.png')) {
-                  e.target.src = '/images/logo.png';
-                }
+            <div 
+              className="h-12 w-12 bg-contain bg-no-repeat bg-center relative"
+              style={{
+                backgroundImage: 'url(/logo.png)',
+                filter: 'brightness(1.25) contrast(1.25)'
               }}
-            />
+              role="img"
+              aria-label="OratorPath Logo"
+            >
+              {/* Fallback SVG if background image fails to load */}
+              <svg
+                className="absolute inset-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="48" height="48" rx="24" fill="#4F46E5"/>
+                <path
+                  d="M24 12C17.373 12 12 17.373 12 24C12 30.627 17.373 36 24 36C30.627 36 36 30.627 36 24C36 17.373 30.627 12 24 12ZM24 34C18.477 34 14 29.523 14 24C14 18.477 18.477 14 24 14C29.523 14 34 18.477 34 24C34 29.523 29.523 34 24 34Z"
+                  fill="white"
+                />
+                <path
+                  d="M24 16C19.582 16 16 19.582 16 24C16 28.418 19.582 32 24 32C28.418 32 32 28.418 32 24C32 19.582 28.418 16 24 16ZM24 30C20.686 30 18 27.314 18 24C18 20.686 20.686 18 24 18C27.314 18 30 20.686 30 24C30 27.314 27.314 30 24 30Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
             <h1 className="text-2xl font-bold text-white">
               OratorPath
             </h1>
