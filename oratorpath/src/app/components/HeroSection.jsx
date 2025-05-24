@@ -199,7 +199,7 @@ export default function HeroSection() {
             initial={{ opacity: 1, scale: 0.8, x: 50 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex flex-col items-center md:items-end justify-center"
+            className="relative w-full md:w-2/5 mt-12 md:mt-0 parallax-element flex flex-col items-center"
             data-speed="0.6"
           >
             {/* SkillsOrbit */}
@@ -212,8 +212,8 @@ export default function HeroSection() {
               <SkillsOrbit />
             </motion.div>
 
-            {/* Hero image */}
-            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 relative" style={{ top: '-80px' }}>
+            {/* Hero image positioned below SkillsOrbit with margin */}
+            <div ref={heroImageRef} className="flex items-center justify-center w-full z-10 mt-48">
               <Image
                 src="/images/hero3d.webp"
                 alt="3D OratorPath illustration"
