@@ -15,10 +15,10 @@ const SimpleFooter = () => {
           {/* Logo and copyright */}
           <div className="flex items-center gap-3">
             <Image
-              src="/Logo.PNG"
+              src="/images/logo.webp"
               alt="OratorPath Logo"
-              width={32}
-              height={32}
+              width={48}
+              height={48}
               className="h-8 w-auto filter brightness-125 contrast-125"
               style={{ objectFit: "contain" }}
             />

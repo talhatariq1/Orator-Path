@@ -56,10 +56,10 @@ const Footer = () => {
           <motion.div variants={itemVariants} className="col-span-1 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
-                src="/Logo.PNG"
+                src="/images/logo.webp"
                 alt="OratorPath Logo"
-                width={40}
-                height={40}
+                width={48}
+                height={48}
                 className="h-10 w-auto filter brightness-125 contrast-125"
                 style={{ objectFit: "contain" }}
               />

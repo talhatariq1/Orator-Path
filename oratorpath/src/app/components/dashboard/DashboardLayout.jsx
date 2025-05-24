@@ -214,7 +214,7 @@ const DashboardLayout = ({ children }) => {
             {collapsed ? (
               <div className="w-10 h-10 relative">
                 <Image
-                  src="/Logo.PNG"
+                  src="/images/logo.webp"
                   alt="OratorPath Logo"
                   fill
                   className="object-contain"
@@ -224,7 +224,7 @@ const DashboardLayout = ({ children }) => {
               <Link href="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 relative">
                   <Image
-                    src="/Logo.PNG"
+                    src="/images/logo.webp"
                     alt="OratorPath Logo"
                     fill
                     className="object-contain"

@@ -20,11 +20,11 @@ const AuthLoading = ({ message = "Authenticating...", fullScreen = true }) => {
         {/* Logo */}
         <div className="mb-6 relative w-16 h-16">
           <Image
-            src="/Logo.PNG"
+            src="/images/logo.webp"
             alt="OratorPath Logo"
-            fill
-            className="object-contain filter brightness-125 contrast-125"
-            priority
+            width={48}
+            height={48}
+            className="h-12 w-auto mb-4 filter brightness-125 contrast-125"
           />
         </div>
         
