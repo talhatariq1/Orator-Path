@@ -306,8 +306,8 @@ const DashboardLayout = ({ children }) => {
                       userButtonPopoverCard: "bg-gray-900 border border-gray-800",
                       userButtonPopoverText: "text-white",
                       userButtonPopoverActionButtonText: "text-white",
-                      userButtonPopoverFooterText: "text-gray-400"
-                    }
+                      userButtonPopoverFooterText: "text-gray-400",
+                      userButtonPopoverActionButton__signOut: "hidden"                    }
                   }}
                 />
               ) : (
@@ -319,8 +319,8 @@ const DashboardLayout = ({ children }) => {
                         userButtonPopoverCard: "bg-gray-900 border border-gray-800",
                         userButtonPopoverText: "text-white",
                         userButtonPopoverActionButtonText: "text-white",
-                        userButtonPopoverFooterText: "text-gray-400"
-                      }
+                        userButtonPopoverFooterText: "text-gray-400",
+                        userButtonPopoverActionButton__signOut: "hidden"                      }
                     }}
                   />
                   <div className="ml-3 ">
