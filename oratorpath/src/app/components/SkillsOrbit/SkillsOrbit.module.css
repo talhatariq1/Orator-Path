@@ -215,3 +215,260 @@
     transition: transform 0.2s ease, box-shadow 0.3s ease;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .orbitContainer {
+    width: 290px;
+    height: 245px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 300px;
+    height: 300px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 500px) {
+  .orbitContainer {
+    width: 350px;
+    height: 360px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 400px  ;
+    height: 400px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+  .orbitContainer {
+    width: 350px;
+    height: 310px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 360px  ;
+    height: 360px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 420px) {
+  .orbitContainer {
+    width: 350px;
+    height: 310px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 360px  ;
+    height: 360px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+
+@media (min-width: 390px) and (max-width: 410px) {
+  .orbitContainer {
+    width: 320px;
+    height: 275px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 340px;
+    height: 340px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+@media (min-width: 350) and (max-width: 390px) {
+  .orbitContainer {
+    width: 300px;
+    height: 235px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 300px;
+    height: 300px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
