@@ -175,8 +175,43 @@
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   .orbitContainer {
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 340px;
     margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 380PX;
+    height: 380PX;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
   }
 }
