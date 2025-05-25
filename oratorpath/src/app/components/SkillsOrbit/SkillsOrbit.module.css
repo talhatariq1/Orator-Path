@@ -175,8 +175,8 @@
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   .orbitContainer {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin-top: 2rem;
   }
 }
