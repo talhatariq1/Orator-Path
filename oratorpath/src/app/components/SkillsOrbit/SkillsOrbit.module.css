@@ -172,3 +172,43 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  .orbitContainer {
+    width: 250px;
+    height: 250px;
+    margin-top: 1rem;
+  }
+
+  .innerOrbit {
+    /* Adjust inner orbit size relative to smaller container if needed */
+    /* width: 90%; */
+    /* height: 90%; */
+  }
+
+  .innerIcon {
+    /* Adjust icon size or positioning for smaller orbit if needed */
+    width: 30px;
+    height: 30px;
+  }
+
+  .innerIcon:nth-child(1) {
+    top: -8%;
+    left: calc(50% - 15px);
+  }
+
+  .innerIcon:nth-child(2) {
+    top: calc(50% - 15px);
+    right: -8%;
+  }
+
+  .innerIcon:nth-child(3) {
+    bottom: -8%;
+    left: calc(50% - 15px);
+  }
+
+  .innerIcon:nth-child(4) {
+    top: calc(50% - 15px);
+    left: -8%;
+  }
+}
