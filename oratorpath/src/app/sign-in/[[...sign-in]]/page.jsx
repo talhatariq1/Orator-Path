@@ -87,6 +87,8 @@ export default function Page() {
 
       {/* Clerk SignIn Component */}
       <SignIn
+        redirectUrl={redirectUrl}
+        afterSignInUrl={redirectUrl}
         signUpUrl="/sign-up"
         appearance={{
           baseTheme: dark,
