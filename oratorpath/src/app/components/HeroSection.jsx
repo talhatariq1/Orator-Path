@@ -79,9 +79,9 @@ export default function HeroSection() {
           >
 
 
-            <h1 className="text-3xl sm:text-4xl text-center md:text-5xl font-extrabold text-white leading-tight md:leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-4xl text-center font-extrabold text-white leading-tight md:leading-tight mb-4">
               Elevate Your
-              <div className="mt-2 md:mt-3 relative min-h-[60px] flex items-center justify-center">
+              <div className="mt-2 md:mt-3 relative min-h-[60px] flex items-center justify-center inline-block">
                 <TextBackgroundEffect />
                 <MorphingText words={["Communication", "Presentation", "Conversation"]} interval={3000} />
                 {/* Subtle underline effect */}

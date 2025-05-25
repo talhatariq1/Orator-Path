@@ -112,7 +112,7 @@ export default function NavigationBar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center px-6 py-1">
         {/* Logo Section - positioned to the left */}
-        <div className="flex-shrink-0 absolute left-6">
+        <div className="flex-shrink-0 absolute left-6 mt-2 sm:mt-10 md:mt-10 lg:mt-0">
           <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <img
               src="/images/logo.webp"
@@ -120,7 +120,7 @@ export default function NavigationBar() {
               width={48}
               height={48}
             />
-            <h1 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-white">
+            <h1 className="text-xs xs:text-lg sm:text-xl md:text-2xl font-bold text-white">
               OratorPath
             </h1>
           </Link>
@@ -182,7 +182,7 @@ export default function NavigationBar() {
         </nav>
 
         {/* Mobile Menu Button - positioned to the right */}
-        <div className="flex items-center gap-2 lg:hidden absolute right-6">
+        <div className="flex items-center gap-2 lg:hidden absolute right-6 mt-2 sm:mt-10 md:mt-10 lg:mt-0">
           <SignedOut>
             <Link
               href="/sign-in"
