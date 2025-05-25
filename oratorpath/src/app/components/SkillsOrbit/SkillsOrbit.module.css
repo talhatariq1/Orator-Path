@@ -430,7 +430,49 @@
     transition: transform 0.2s ease, box-shadow 0.3s ease;
   }
 }
-@media (min-width: 350) and (max-width: 390px) {
+@media (min-width: 370) and (max-width: 390px) {
+  .orbitContainer {
+    width: 300px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  .innerOrbit{
+    will-change: transform;
+    contain: layout style;
+    width: 310px;
+    height: 310px;
+    animation: rotateClockwise 30s linear infinite;
+  }
+  @keyframes rotateClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes rotateCounterClockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  /* Keep the icons upright while orbiting */
+  .innerIcon {
+    animation: keepUpright 30s linear infinite reverse;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .outerIcon {
+    animation: keepUpright 40s linear infinite;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+}
+@media (min-width: 350) and (max-width: 370px) {
   .orbitContainer {
     width: 300px;
     height: 235px;
