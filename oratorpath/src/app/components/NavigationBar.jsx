@@ -120,7 +120,7 @@ export default function NavigationBar() {
               width={48}
               height={48}
             />
-            <h1 className="text-2xl font-bold text-white">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
               OratorPath
             </h1>
           </Link>
