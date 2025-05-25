@@ -37,8 +37,8 @@
 }
 
 .innerOrbit {
-  width: 450px;
-  height: 450px;
+  width: 80%;
+  height: 80%;
   animation: rotateClockwise 30s linear infinite;
   will-change: transform;
   contain: layout style;
@@ -77,23 +77,23 @@
 }
 
 .innerIcon:nth-child(1) {
-  top: -20px;
+  top: -5%;
   left: calc(50% - 20px);
 }
 
 .innerIcon:nth-child(2) {
   top: calc(50% - 20px);
-  right: -20px;
+  right: -5%;
 }
 
 .innerIcon:nth-child(3) {
-  bottom: -20px;
+  bottom: -5%;
   left: calc(50% - 20px);
 }
 
 .innerIcon:nth-child(4) {
   top: calc(50% - 20px);
-  left: -20px;
+  left: -5%;
 }
 
 /* Position icons in outer orbit
