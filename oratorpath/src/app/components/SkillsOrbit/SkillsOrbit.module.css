@@ -172,7 +172,7 @@
     transform: rotate(360deg);
   }
 }
-@media (min-width: 1024px) and (max-width: 1270px) {
+@media (min-width: 1024px) and (max-width: 1278px) {
   .orbitContainer {
     width: 400px;
     height: 340px;
