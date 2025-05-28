@@ -619,76 +619,82 @@ const SpeechPracticePlayground = () => {
                       <p className="text-sm text-gray-400 mt-2">Try again or check microphone settings.</p>
                     </div>
                   ) : state.feedbackData ? (
-                    <div className="space-y-6">
-                      <div className="mb-8">
-                        <h3 className="text-lg text-gray-300 mb-2 font-semibold">Transcript</h3>
-                        <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700/50 max-h-32 overflow-y-auto">
-                          <p className="text-gray-300 text-sm italic">
-                            {state.feedbackData.transcript !== "No transcript available" ? state.feedbackData.transcript : "No transcript available. Speak clearly or check microphone."}
-                          </p>
+                    state.feedbackData.transcript !== "No transcript available" ? (
+                      <div className="space-y-6">
+                        <div className="mb-8">
+                          <h3 className="text-lg text-gray-300 mb-2 font-semibold">Transcript</h3>
+                          <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700/50 max-h-32 overflow-y-auto">
+                            <p className="text-gray-300 text-sm italic">
+                              {state.feedbackData.transcript !== "No transcript available" ? state.feedbackData.transcript : "No transcript available. Speak clearly or check microphone."}
+                            </p>
+                          </div>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-gray-300">Speaking Pace</span>
+                            <span className="text-gray-300 font-mono">{state.feedbackData.pace}%</span>
+                          </div>
+                          <div className="w-full bg-gray-700/30 rounded-full h-3">
+                            <motion.div
+                              initial={{ width: 0 }}
+                              animate={{ width: `${state.feedbackData.pace}%` }}
+                              transition={{ duration: 1, ease: "easeOut" }}
+                              className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-400 mt-1">{state.feedbackData.paceAnalysis}</p>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-gray-300">Clarity</span>
+                            <span className="text-gray-300 font-mono">{state.feedbackData.clarity}%</span>
+                          </div>
+                          <div className="w-full bg-gray-700/30 rounded-full h-3">
+                            <motion.div
+                              initial={{ width: 0 }}
+                              animate={{ width: `${state.feedbackData.clarity}%` }}
+                              transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                              className="bg-gradient-to-r from-green-500 to-teal-500 h-3 rounded-full"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-400 mt-1">{state.feedbackData.clarityAnalysis}</p>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-gray-300">Confidence</span>
+                            <span className="text-gray-300 font-mono">{state.feedbackData.confidence}%</span>
+                          </div>
+                          <div className="w-full bg-gray-700/30 rounded-full h-3">
+                            <motion.div
+                              initial={{ width: 0 }}
+                              animate={{ width: `${state.feedbackData.confidence}%` }}
+                              transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
+                              className="bg-gradient-to-r from-yellow-500 to-amber-500 h-3 rounded-full"
+                            />
+                          </div>
+                          <p className="text-sm text-gray-400 mt-1">{state.feedbackData.confidenceAnalysis}</p>
+                        </div>
+                        <div>
+                          <div className="flex justify-between mb-2">
+                            <span className="text-gray-300">Filler Words</span>
+                            <span className="text-gray-300 font-mono">{state.feedbackData.fillerWords}</span>
+                          </div>
+                          <div className="flex gap-1">
+                            {Array.from({ length: 10 }).map((_, i) => (
+                              <div key={i} className={`h-6 w-full rounded ${i < state.feedbackData.fillerWords ? "bg-red-500/70" : "bg-gray-700/30"}`} />
+                            ))}
+                          </div>
+                          <p className="text-sm text-gray-400 mt-1">{state.feedbackData.fillerWordsAnalysis}</p>
+                        </div>
+                        <div className="mt-8 pt-4 border-t border-gray-700/30">
+                          <p className="text-xs text-gray-400">Analysis completed at: {new Date(state.feedbackData.timestamp).toLocaleTimeString()}</p>
                         </div>
                       </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-gray-300">Speaking Pace</span>
-                          <span className="text-gray-300 font-mono">{state.feedbackData.pace}%</span>
-                        </div>
-                        <div className="w-full bg-gray-700/30 rounded-full h-3">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${state.feedbackData.pace}%` }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                            className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full"
-                          />
-                        </div>
-                        <p className="text-sm text-gray-400 mt-1">{state.feedbackData.paceAnalysis}</p>
+                    ) : (
+                      <div className="p-6 text-center bg-gray-800/50 rounded-lg mb-6">
+                        <p className="text-gray-300">No transcript detected. Please try again.</p>
                       </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-gray-300">Clarity</span>
-                          <span className="text-gray-300 font-mono">{state.feedbackData.clarity}%</span>
-                        </div>
-                        <div className="w-full bg-gray-700/30 rounded-full h-3">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${state.feedbackData.clarity}%` }}
-                            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                            className="bg-gradient-to-r from-green-500 to-teal-500 h-3 rounded-full"
-                          />
-                        </div>
-                        <p className="text-sm text-gray-400 mt-1">{state.feedbackData.clarityAnalysis}</p>
-                      </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-gray-300">Confidence</span>
-                          <span className="text-gray-300 font-mono">{state.feedbackData.confidence}%</span>
-                        </div>
-                        <div className="w-full bg-gray-700/30 rounded-full h-3">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${state.feedbackData.confidence}%` }}
-                            transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                            className="bg-gradient-to-r from-yellow-500 to-amber-500 h-3 rounded-full"
-                          />
-                        </div>
-                        <p className="text-sm text-gray-400 mt-1">{state.feedbackData.confidenceAnalysis}</p>
-                      </div>
-                      <div>
-                        <div className="flex justify-between mb-2">
-                          <span className="text-gray-300">Filler Words</span>
-                          <span className="text-gray-300 font-mono">{state.feedbackData.fillerWords}</span>
-                        </div>
-                        <div className="flex gap-1">
-                          {Array.from({ length: 10 }).map((_, i) => (
-                            <div key={i} className={`h-6 w-full rounded ${i < state.feedbackData.fillerWords ? "bg-red-500/70" : "bg-gray-700/30"}`} />
-                          ))}
-                        </div>
-                        <p className="text-sm text-gray-400 mt-1">{state.feedbackData.fillerWordsAnalysis}</p>
-                      </div>
-                      <div className="mt-8 pt-4 border-t border-gray-700/30">
-                        <p className="text-xs text-gray-400">Analysis completed at: {new Date(state.feedbackData.timestamp).toLocaleTimeString()}</p>
-                      </div>
-                    </div>
+                    )
                   ) : (
                     <div className="text-center py-4">
                       <p className="text-gray-400">Processing your speech...</p>
